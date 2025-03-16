@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react';
 import { YoutubeTranscript } from 'youtube-transcript';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { isYouTubeURL } from '../utils/Validator';
-import Loader from './Loader'; // Import the Loader component
-
-const API_KEY: string | undefined = "AIzaSyBGIaWZ1DPvIMrnCQ3OfET26EhFBvC2vuA";  
-const genAI = new GoogleGenerativeAI(API_KEY);
+import Loader from './Loader'; 
+const API_KEY: string | undefined = import.meta.env.VITE_API_KEY;
+const genAI = new GoogleGenerativeAI(API_KEY ?? '');
 
 export function CurrentURL() {
   const [url, setUrl] = useState<string | undefined>('');
@@ -63,7 +62,7 @@ export function CurrentURL() {
 
       {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
       
-      {loading && <Loader />} {/* Use the reusable Loader component */}
+      {loading && <Loader />} 
 
       {summary && (
         <div className="bg-gray-700 p-4 rounded-md w-full text-sm text-gray-300 min-h-[200px]">
