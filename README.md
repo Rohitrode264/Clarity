@@ -1,54 +1,38 @@
-# React + TypeScript + Vite
+# Clarity: YouTube Video Summarizer Chrome Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Clarity is a Chrome extension designed to help users quickly summarize YouTube videos. With just a click of a button, Clarity generates a concise summary of any YouTube video, making it easier to grasp the key points without watching the entire video.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Summarize YouTube Videos**: Click the extension's button to summarize the content of a video.
+- **Easy-to-Use Interface**: The extension provides a clean and simple interface to display the video summary.
+- **Popup Window**: View the summary directly in the popup when you click the extension icon.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Download the Clarity extension ZIP file or clone the repository.
+2. Open **Chrome** and go to `chrome://extensions/`.
+3. Enable **Developer mode** by toggling the switch in the top right.
+4. Click **Load unpacked** and select the Clarity extension folder.
+5. The extension icon will appear in your Chrome toolbar.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## How to Use
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Open any YouTube video in your browser.
+2. Click the **Clarity** icon in the Chrome toolbar.
+3. Click the **"Summarize this YouTube video"** button in the popup window.
+4. View the summarized content of the video.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Future Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Chat Functionality**: Allow users to ask questions about the video summary.
+- **Voice Integration**: Add a "Hear" button to listen to the summary.
+- **Translation**: Summarize videos in different languages.
+
+## Contributing
+
+Feel free to contribute to the project! Fork the repository, submit pull requests, and help make Clarity even better.
+
+## License
+
+This project is licensed under the MIT License.
