@@ -33,6 +33,4 @@ Clarity is a Chrome extension designed to help users quickly summarize YouTube v
 
 Feel free to contribute to the project! Fork the repository, submit pull requests, and help make Clarity even better.
 
-## License
 
-This project is licensed under the MIT License.
